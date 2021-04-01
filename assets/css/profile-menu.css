@@ -1,0 +1,133 @@
+@charset "UTF-8";
+body {
+    margin: 0;
+    font-family: 'メイリオ', 'Hiragino Kaku Gothic Pro', sans-serif
+}
+
+.page-head img {
+    width: 80px;
+    height: 40px;
+    vertical-align: top;
+}
+
+.page {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-row-gap: 1px;
+    row-gap: 1px;
+    min-height: 100vh;
+}
+
+.page-head {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 5px 0 5px 0;
+    background-color: #222;
+    text-align: center;
+}
+
+.page-head a {
+    text-decoration: none;
+}
+
+.page-head p {
+    margin: 0 auto;
+    color: white;
+}
+
+.page-main {
+    grid-column: 1;
+    grid-row: 2;
+    background-image: url("../img/dk.png");
+    background-size: 100% 100%;
+}
+
+.page-nav {
+    grid-column: 1;
+    grid-row: 2;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+}
+
+.page-nav h1 {
+    text-align: center;
+    color: white;
+}
+
+.page-nav h1 a:hover {
+    opacity: 0.7;
+}
+
+li a:hover {
+    opacity: 0.7;
+}
+
+.page-head a:hover {
+    opacity: 0.7;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+.open .page-nav {
+    display: block;
+}
+
+.page-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.page-nav a {
+    display: block;
+    margin: 30px;
+    border-bottom: solid 1px #aaa;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.page-btn,
+.page-btn-close {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    align-self: center;
+    padding: 0 0 0 20px;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.page-btn-close {
+    display: none;
+}
+
+.open .page-btn {
+    display: none;
+}
+
+.open .page-btn-close {
+    display: block;
+}
+
+. .copyright {
+    grid-column: 1;
+    grid-row: 3;
+    padding: 5px 0;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+}
+
+.my-icon {
+    color: white;
+    text-align: center;
+}

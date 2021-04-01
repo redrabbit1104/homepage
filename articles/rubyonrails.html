@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja" style="overflow-x:hidden;">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,user-scalable=yes,initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="システムエンジニア,SE,IT,Javascript,Ruby,Ruby on Rails,PHP,HTML,CSS">
+    <title> | Jin`s Blog</title>
+    <!-- ↓ファビコン --> 
+    <link rel="shortcut icon" href="../assets/img/favicon.ico">
+    <!-- ↓携帯アイコン -->
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+    <!-- ↓リセットcss,フォント等 -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900" rel="stylesheet">
+    <!-- ↓font-awesomeアニメ効果URL -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.3.0/font-awesome-animation.min.css">
+    <!-- ↓css -->
+    <link rel="stylesheet" href="../assets/css/error-note.css">
+  </head>
+
+  <body class="page">
+
+    <!--ヘッダー-->
+    <header class="page-head">
+       <h3>Javascript</h3>
+       <!-- <div class="login">login</div> -->
+    </header>
+  <style>
+    .image-box {
+      background-image: url("../assets/img/rails/rails1.png");
+      background-size: 100% 100%; 
+    }     
+  </style>
+  <script language="javascript" type="text/javascript">  
+    function newMark(y,m,d){
+      oldDay = new Date(y+"/"+m+"/"+d);
+      newDay = new Date();
+      n = (newDay - oldDay)/(1000*60*60*24);
+      if (n <= 7) document.write("<font color='red' size='2px'><i>&nbsp;New</i></font>");}
+  </script>
+
+    <main class="page-main">
+        <h2 class="contents">Contents</h2>
+        <section class="error">
+         
+          <table>
+            <tr class="first-row">
+              <td class="image-box" rowspan="3" width="200" height="130"></td>
+              <td class="table-date-title">
+                <ul class="table-lists">
+                  <li class="table-date"><span class="fas fa-compass" title=""></span>&nbsp;2020.11.21<script>newMark(2020,11,21)</script></li>
+                  <li class="table-tag">RubyOnRails</li>
+                </ul>
+              </td>
+            </tr>
+              <tr>
+                <th class="table-text-title"><a href="rails/rails1.html">Railsのルーティング指定について</a></th>
+              </tr>
+              <tr>
+                <td class="table-text">
+                root to:、get '表示するアドレス', to: 'コントローラー名#アクション名'、resources :コントローラー名についてそれぞれの違いについてまとめてみました。
+                </td>
+              </tr>
+          </table>
+
+        </section>
+    </main>
+    <footer class="foot">
+      
+    </footer>
+   
+  </body>
+</html>

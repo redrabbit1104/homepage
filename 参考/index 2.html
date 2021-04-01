@@ -1,0 +1,621 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e58082c281","applicationID":"185441125","transactionName":"IAwPQxZXVA1cExlURAwNFRgIXVkFZgdEU1sGEE5EDFdP","queueTime":0,"applicationTime":118,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={licenseKey:"e58082c281",applicationID:"185441125"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(c(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(5),c=e(6),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,n){s[n]=i(p+n,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(l+"tracer",[u.now(),e,t],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&d("lcp",[t[t.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var n=Math.round(e.timeStamp),t={type:e.type};n<=p.now()?t.fid=p.now()-n:n>p.offset&&n<=Date.now()?(n-=p.offset,t.fid=p.now()-n):n=p.now(),g=!0,d("timing",["fi",n,t])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(4),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e){function n(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,n,!1)}n.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],5:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],6:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],7:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function t(t,r,i,o){if(!p.aborted||o){e&&e(t,r,i);for(var a=n(i),c=v(t),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[t]];return d&&d.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(t)}function y(e,n){u(e,function(e,t){n=n||"feature",w[t]=n,n in s||(s[n]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(5),s={},d={},p=n.exports=i();p.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(w,function(n,t){e[n]||(e[n]=t)});var t=a();f("mark",["onload",t+E.offset],null,"api"),f("timing",["load",t]);var r=l.createElement("script");r.src="https://"+e.agent,n.parentNode.insertBefore(r,n)}}function i(){"complete"===l.readyState&&o()}function o(){f("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(c=Math.max((new Date).getTime(),c))-E.offset}var c=(new Date).getTime(),f=e("handle"),u=e(5),s=e("ee"),d=e(3),p=window,l=p.document,m="addEventListener",v="attachEvent",g=p.XMLHttpRequest,y=g&&g.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:g,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var h=""+location,w={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1177.min.js"},b=g&&y&&y[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:c,now:a,origin:h,features:{},xhrWrappable:b,userAgent:d};e(1),e(2),l[m]?(l[m]("DOMContentLoaded",o,!1),p[m]("load",r,!1)):(l[v]("onreadystatechange",i),p[v]("onload",r)),f("mark",["firstbyte",c],null,"api");var x=0,O=e(7)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(6),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof t?t(r,a):t||{}}catch(u){p([u,"",[r,a,i],c])}s(n+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(n+"err",[r,a,d],c),d}finally{s(n+"end",[r,a,f],c)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<n.length;f++)c=n[f],a=e[c],r(a)||(e[c]=t(a,u?c+i:i,o,c))}function s(t,r,i){if(!f||n){var o=f;f=!0;try{e.emit(t,r,i,n)}catch(a){p([a,t,r,i])}f=o}}function d(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){p([r])}for(var i in e)c.call(e,i)&&(n[i]=e[i]);return n}function p(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>“自分にぴったりな”働き方とは？仕事選びの第一歩 | マイナビ 学生の窓口</title>
+    <meta name="description" content="大学生にとって、就職先を選ぶことは非常に重要なこと。就活に入って、「何から始めれば？」「どうやって情報収集すれば？」といった不安があるのではないでしょうか。今後の人生において、重要な選択となる就活を「失敗した！」と思いたくないですよね。まずは“働く”なかで自分は何を優先したいのか考えましょう。“自分らしく”働くために、人事・労務のプロの“社労士”さんにお話を伺いながら、そのヒントを探っていきましょう。">
+    <meta name="keywords" content="社労士,就活,就職先,全国社会保険労務士連合会,社会保険労務士,学生の窓口,マイナビ">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@m_gakumado"> <!-- サイトにより or shukatsu_style ‏ or freshers_twitを設定   -->
+    <meta property="og:url" content="https://gakumado.mynavi.jp/contents/m/articles/gmd/_tu_sharoushi">
+    <meta property="og:title" content="“自分にぴったりな”働き方とは？仕事選びの第一歩 | マイナビ 学生の窓口">
+    <meta property="og:description" content="大学生にとって、就職先を選ぶことは非常に重要なこと。就活に入って、「何から始めれば？」「どうやって情報収集すれば？」といった不安があるのではないでしょうか。今後の人生において、重要な選択となる就活を「失敗した！」と思いたくないですよね。まずは“働く”なかで自分は何を優先したいのか考えましょう。“自分らしく”働くために、人事・労務のプロの“社労士”さんにお話を伺いながら、そのヒントを探っていきましょう。">
+    <meta property="og:image" content="https://gakumado.mynavi.jp/contents/m/articles/gmd/_tu_sharoushi/img/og_index.jpg">
+
+    <!-- ↓原則変更しない_読込必須 -->
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        dataLayer.push({
+            'cat': 'gmd.top',
+            'rootcatname': '',
+            'catname': '',
+            'tagscsv': '',
+            'signuptype': ''
+        });
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5HVTL9H');
+    </script>
+    <!-- End Google Tag Manager -->
+    <!-- ↑原則変更しない_読込必須 -->
+
+    <!-- ↓Analyticstag_「★タイアップごとの変更箇所」だけ変更する_読込必須 -->
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-56888570-1', {
+            'allowLinker': true
+        });
+        ga('require', 'linker');
+        ga('linker:autoLink', ['mynavi.jp']);
+        ga('set', 'contentGroup3', 'true');
+        ga('set', 'contentGroup1', 'マイナビ学生の窓口'); /* 媒体ラベル*/
+        // ↓★タイアップごとの変更箇所
+        ga('set', 'contentGroup4', '学窓TU_20200223全国社会保険労務士会連合会index'); /*タイアップ計測用ラベル/*/
+        // ↑★タイアップごとの変更箇所
+
+        ga('send', 'pageview');
+    </script>
+    <script type="text/javascript" src="https://gakumado.mynavi.jp/m/articles/gmd/common/js/ga_social_tracking.js"></script>
+    <!-- ↑Analyticstag_「★タイアップごとの変更箇所」だけ変更する_読込必須 -->
+</head>
+
+<body id="detail_ftp" style="background-color:#FFF;">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HVTL9H" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- ↓rwd_PCヘッダーの呼び出し -->
+    <div class="r-pc">
+<script src="https://gakumado.mynavi.jp/assets/front/gmd/pc/application-c70ca92cd7563fa921208d45095f559fb78663af39d9649e2b200afa447dcb9e.js"></script>
+<link rel="stylesheet" media="screen" href="https://gakumado.mynavi.jp/assets/front/gmd/pc/application_tu-9a6dbedb04953cf1c0040a20db6084f7d98d9849e927c5fa1fc5b715c62c56df.css">
+
+<header class="l-header">
+  <div class="c-header-heading">
+    <div class="c-header-heading__inner">
+      <i class="c-header-heading__burger js-header-burger"><span></span></i>
+      <h1 class="c-header-heading__logo">
+        <a data-event="click" data-event-category="header_logo" href="/"><img alt="マイナビ学生の窓口 大学生に、いまと未来のきかっけを" src="https://gakumado.mynavi.jp/assets/front/gmd/common/logo_mynavi_gmd_header-4d8cb32591f31e6fda14d76e0ac2fd35133f245f8bb79efdc8b0ab70334c405d.png"></a>
+      </h1>
+      <p class="c-header-heading__user">
+        <a href="/login"><i class="c-header-heading__icon-user"></i></a>
+      </p>
+    </div>
+  </div>
+  <!-- /.c-header-heading -->
+  <div class="c-header-globalnav js-header-globalnav">
+    <div class="c-header-globalnav__inner">
+      <i class="c-header-globalnav__cross js-header-cross"></i>
+
+      <div class="c-header-globalnav__primary">
+        <div class="c-header-search">
+          <form action="/gmd/articles/">
+            <input type="text" name="search" autocomplete="off" class="c-header-search__input js-suggest" data-target="#header-suggest-list" placeholder="気になるワードを検索">
+            <button type="submit" class="c-header-search__btn"><i class="c-header-search__icon"></i></button>
+          </form>
+          <ul id="header-suggest-list" class="c-header__suggest-list"></ul>
+        </div>
+        <ul class="c-header__category-globalnav c-header-category">
+          <li class="c-header-category__item category--newlife"><a href="/gmd/categories/newlife">入学&amp;新生活</a></li>
+          <li class="c-header-category__item category--campuslife"><a href="/gmd/categories/campuslife">大学生活</a></li>
+          <li class="c-header-category__item category--career"><a href="/gmd/categories/career">将来を考える</a></li>
+          <li class="c-header-category__item category--style"><a href="https://gakumado.mynavi.jp/style">就活準備</a></li>
+          <li class="c-header-category__item category--freshers"><a href="https://gakumado.mynavi.jp/freshers">新社会人準備</a></li>
+          <li class="c-header-category__item category--otoku"><a href="/gmd/categories/otoku">学割・プレゼント</a></li>
+          <li class="c-header-category__item category--other"><a href="/gmd/feature">特集</a></li>
+          <li class="c-header-category__item category--other"><a href="/gmd/events">イベント</a></li>
+        </ul>
+      </div>
+      <!-- /.c-header-globalnav__primary -->
+
+      <div class="c-header-globalnav__secondary">
+        <ul class="c-header__link-globalnav c-header-link">
+          <li class="c-header-link__item globalnav-link--user">
+            <a href="/login">
+            <i class="c-header-link__icon-item"></i>ログイン / 新規会員登録
+</a>          </li>
+          <li class="c-header-link__item globalnav-link--about">
+            <a href="/gmd/pages/about/">
+            <i class="c-header-link__icon-item"></i>マイナビ学生の窓口とは
+</a>          </li>
+          <li class="c-header-link__item globalnav-link--point">
+            <a href="/gmd/pages/point/about">
+            <i class="c-header-link__icon-item"></i>Tポイントを貯める
+</a>          </li>
+        </ul>
+        <ul class="c-header__sns-globalnav c-header-sns">
+          <li class="c-header-sns__item c-header-sns--twitter">
+  <a href="https://twitter.com/m_gakumado" target="_brank">
+    <i class="c-header-sns__icon"></i>
+  </a>
+</li>
+<li class="c-header-sns__item c-header-sns--instagram">
+  <a href="https://www.instagram.com/gakumadobymynavi/" target="_brank">
+    <i class="c-header-sns__icon"></i>
+  </a>
+</li>
+        </ul>
+      </div>
+      <!-- /.c-header-globalnav__secondary -->
+    </div>
+  </div>
+  <!-- /.c-header-globalnav -->
+</header>
+
+    </div>
+    <!-- ↑rwd_PCヘッダーの呼び出し -->
+
+
+    <!-- ↓rwd_SPヘッダーの呼び出し -->
+    <div class="r-sp">
+<script src="https://gakumado.mynavi.jp/assets/front/gmd/sp/application-bc6db62956c4361b424f55a462b247dcd563e2720607636ffca94820273c72e9.js"></script>
+<link rel="stylesheet" media="screen" href="https://gakumado.mynavi.jp/assets/front/gmd/sp/application_tu-da8fb64129077374e0832f891e2b39134893b7ab5d433f201172921655b1434d.css">
+
+<header id="header" class="l-header">
+  <div class="c-header-heading">
+    <div class="c-header-heading__inner">
+      <i class="c-header-heading__burger js-header-burger"><span></span></i>
+      <p class="c-header-heading__logo">
+        <a data-event="click" data-event-category="header_logo" href="/"><img alt="マイナビ学生の窓口 大学生に、いまと未来のきかっけを" src="https://gakumado.mynavi.jp/assets/front/gmd/common/logo_mynavi_gmd_header-4d8cb32591f31e6fda14d76e0ac2fd35133f245f8bb79efdc8b0ab70334c405d.png"></a>
+      </p>
+      <p class="c-header-heading__user">
+        <a href="/login"><i class="c-header-heading__icon-user"></i></a>
+      </p>
+    </div>
+  </div>
+  <!-- /.c-header-heading -->
+
+  <div class="c-header-globalnav js-header-globalnav">
+    <div class="c-header-globalnav__inner">
+      <i class="c-header-globalnav__cross js-header-cross"></i>
+
+      <div class="c-header-globalnav__primary">
+        <div class="c-header-search">
+          <form action="/gmd/articles/">
+            <input type="text" name="text" autocomplete="off" class="c-header-search__input js-suggest" data-target="#header-suggest-list" placeholder="気になるワードを検索">
+            <button type="submit" class="c-header-search__btn"><i class="c-header-search__icon"></i></button>
+          </form>
+          <ul id="header-suggest-list" class="c-header__suggest-list"></ul>
+        </div>
+        <ul class="c-header__category-globalnav c-header-category">
+          <li class="c-header-category__item category--newlife"><a href="/gmd/categories/newlife">入学&amp;新生活</a></li>
+          <li class="c-header-category__item category--campuslife"><a href="/gmd/categories/campuslife">大学生活</a></li>
+          <li class="c-header-category__item category--career"><a href="/gmd/categories/career">将来を考える</a></li>
+          <li class="c-header-category__item category--style"><a href="https://gakumado.mynavi.jp/style">就活準備</a></li>
+          <li class="c-header-category__item category--freshers"><a href="https://gakumado.mynavi.jp/freshers">新社会人準備</a></li>
+          <li class="c-header-category__item category--otoku"><a href="/gmd/categories/otoku">学割・プレゼント</a></li>
+          <li class="c-header-category__item category--other"><a href="/gmd/feature">特集</a></li>
+          <li class="c-header-category__item category--other"><a href="/gmd/events">イベント</a></li>
+        </ul>
+      </div>
+      <!-- /.c-header-globalnav__primary -->
+
+      <div class="c-header-globalnav__secondary">
+        <ul class="c-header__link-globalnav c-header-link">
+          <li class="c-header-link__item globalnav-link--user">
+            <a href="/login">
+            <i class="c-header-link__icon-item"></i>ログイン / 新規会員登録
+</a>          </li>
+          <li class="c-header-link__item globalnav-link--about">
+            <a href="/gmd/pages/about/">
+            <i class="c-header-link__icon-item"></i>マイナビ学生の窓口とは
+</a>          </li>
+          <li class="c-header-link__item globalnav-link--point">
+            <a href="/gmd/pages/point/about">
+            <i class="c-header-link__icon-item"></i>Tポイントを貯める
+</a>          </li>
+        </ul>
+        <ul class="c-header__sns-globalnav c-header-sns">
+          <li class="c-header-sns__item c-header-sns--twitter">
+  <a href="https://twitter.com/m_gakumado" target="_brank">
+    <i class="c-header-sns__icon"></i>
+  </a>
+</li>
+<li class="c-header-sns__item c-header-sns--instagram">
+  <a href="https://www.instagram.com/gakumadobymynavi/" target="_brank">
+    <i class="c-header-sns__icon"></i>
+  </a>
+</li>
+        </ul>
+      </div>
+      <!-- /.c-header-globalnav__secondary -->
+    </div>
+  </div>
+  <!-- /.c-header-globalnav -->
+</header>
+
+    </div>
+    <!-- ↑rwd_SPヘッダーの呼び出し -->
+
+    <div id="wrapper">
+        <!-- ↓rwd_PCのパンくず／SNSの呼び出し -->
+        <div class="r-pc">
+            <!-- ↓パンくず／SNS(不要ならコメント)CHANGE_20170620-->
+            <div class="l-breadcrumb">
+                <!-- ↓パンくず（不要ならコメント）_2017-06-20-->
+                <a class="c-breadcrumb__item" href="/">学生の窓口トップ</a>
+                <a class="c-breadcrumb__item" href="/gmd/categories/career">将来を考える</a>
+                <a class="c-breadcrumb__item">“自分にぴったりな”働き方とは？仕事選びの第一歩</a>
+                <!-- ↑パンくず（不要ならコメント）_2017-06-20-->
+
+
+                <!-- ↓Facebook_Twitter_Button_CHANGE_20170620-->
+                <div style="float:right;margin-top: -2px;">
+                    <ul>
+                        <li class="facebook" style="float:left;width:auto;padding-right:10px;">
+                            <div id="fb-root"></div>
+                            <script type="text/javascript">
+                                (function(d, s, id) {
+                                    var js, fjs = d.getElementsByTagName(s)[0];
+                                    if (d.getElementById(id)) return;
+                                    js = d.createElement(s);
+                                    js.id = id;
+                                    js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
+                                    fjs.parentNode.insertBefore(js, fjs);
+                                }(document, 'script', 'facebook-jssdk'));
+                            </script>
+                            <div class="fb-like" data-href="https://gakumado.mynavi.jp/contents/m/articles/gmd/_tu_sharoushi/index.php" data-action="like" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>
+                        </li>
+                        <li class="twitter" style="float:left;width:auto;"> <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-lang="ja">Tweet</a>
+                            <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
+                        </li>
+                    </ul>
+                </div>
+                <!-- ↑Facebook_Twitter_Button_CHANGE_20170620-->
+            </div>
+            <!-- ↑パンくず／SNS(不要ならコメント)CHANGE_20170620-->
+        </div>
+        <!-- ↑rwd_PCのパンくず／SNSの呼び出し -->
+
+        <!-- ↓rwdのCSS・JSを記載 -->
+        <link href="https://gakumado.mynavi.jp/m/articles/gmd/_tu_sharoushi/assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://gakumado.mynavi.jp/m/articles/gmd/_tu_sharoushi/css/style.css" rel="stylesheet">
+        <script src="https://gakumado.mynavi.jp/m/articles/gmd/_tu_sharoushi/assets/js/bootstrap.min.js"></script>
+        <script src="https://gakumado.mynavi.jp/m/articles/gmd/_tu_sharoushi/js/jquery.bxslider.js"></script>
+        <script src="https://gakumado.mynavi.jp/m/articles/gmd/_tu_sharoushi/js/fixHeight.js"></script>
+        <script>
+            (function() {
+                var html = document.getElementsByTagName('html') || [];
+                html[0].classList.add('enable-javascript');
+                window.addEventListener("load", function() {
+                    html[0].classList.add('window-load');
+                }, false);
+            })();
+        </script>
+        <script>
+            (function($) {
+                $(window).on("load", function() {
+                    $(".js-slider").bxSlider({
+                        auto: true,
+                        infiniteLoop: true,
+                        responsive: true,
+                        speed: 1000,
+                        displaySlideQty: 1,
+                        pager: true,
+                        slideWidth: 960,
+                        startSlide: 0,
+                        minSlides: 1,
+                        maxSlides: 1,
+                        moveSlides: 1,
+                        slideMargin: 0,
+                        pause: 4000,
+                    });
+                });
+            }(jQuery));
+        </script>
+        <script src="https://gakumado.mynavi.jp/m/articles/gmd/_tu_sharoushi/js/jquery-3.4.1.min.js"></script>
+        <script src="https://gakumado.mynavi.jp/m/articles/gmd/_tu_sharoushi/js/jquery.easing.1.3.js"></script>
+        <script src="https://gakumado.mynavi.jp/m/articles/gmd/_tu_sharoushi/js/imagesloaded.pkgd.min.js"></script>
+        <script src="https://gakumado.mynavi.jp/m/articles/gmd/_tu_sharoushi/js/hammer.min.js"></script>
+        <script src="https://gakumado.mynavi.jp/m/articles/gmd/_tu_sharoushi/js/jquery.images-compare.js"></script>
+        <script src="https://gakumado.mynavi.jp/m/articles/gmd/_tu_sharoushi/js/script.js"></script>
+    
+        <link href="https://fonts.googleapis.com/css?family=Oswald&amp;display=swap" rel="stylesheet">
+        <link href="https://gakumado.mynavi.jp/m/articles/gmd/_tu_sharoushi/css/shr2020.css" rel="stylesheet">
+        <!-- ↑rwdのCSS・JSを記載 -->
+<div class="c-article-tool__new" style="float:right;margin: 4px 4px 4px 0;">PR</div>
+
+
+<!-- ↓★★★★★ここからコンテンツ ★★★★★ -->
+        <div id="shr2020">
+            <section class="top_kv">
+                <h1><img src="https://gakumado.mynavi.jp/m/articles/gmd/_tu_sharoushi/img/shr2020/kv.png" alt="“自分にぴったりな”働き方とは？仕事選びの第一歩"></h1>
+                
+                <p>大学生にとって、就職先を選ぶことは非常に重要なこと。<br class="is-pc">就活時期に入って、「何から始めれば？」「どうやって情報収集すれば？」といった不安があるのではないでしょうか。<br class="is-pc">今後の人生において、重要な選択となる就活を「失敗した！」と思いたくないですよね。<br class="is-pc">まずは“働く”なかで自分は何を優先したいのか考えましょう。<br class="is-pc">“自分らしく”働くために、人事・労務のプロの“社労士”さんにお話を伺いながら、<br class="is-pc">そのヒントを探っていきましょう。</p>
+                
+                <nav class="nav">
+                    <ul>
+                        <li class="dropshadow1"><a href="#article1" class="bgcolor1"><span>深層心理から見えてくる<br>“理想の働き方”診断テスト</span></a></li>
+                        <li class="dropshadow1"><a href="#article2" class="bgcolor2"><span>2つの視点で比べる<br>“企業見極めPOINT”</span></a></li>
+                        <li class="dropshadow1"><a href="#article3" class="bgcolor3"><span>幸せな人生を送るための<br>未来予想ロードマップ</span></a></li>
+                    </ul>
+                </nav>
+            </section>
+            
+            <div class="contents">
+                <section class="top_read">
+                    <h2><img src="https://gakumado.mynavi.jp/m/articles/gmd/_tu_sharoushi/img/shr2020/top_illust1.png" alt="社労士（社会保険労務士）って何？"></h2>
+                    <div class="text">
+                        <p>社労士とは、労働と社会保険に関する専門知識とノウハウで、働く人の”笑顔”をサポートする国家資格者です。簡単にいうと、「企業の総務や人事がやっているお仕事」を専門的に行う、「ヒト」に関するプロフェッショナルであり、「企業」と「働く人」の笑顔を支える栄養管理士&amp;ホームドクターのようなイメージです。</p>
+                        <figure class="illust"><img src="https://gakumado.mynavi.jp/m/articles/gmd/_tu_sharoushi/img/shr2020/top_illust2.jpg"></figure>
+                    </div>
+                </section>
+                
+                <section class="top_nav nav1" id="article1">
+                    <div class="nav_ttl">
+                        <figure class="illust1"><img src="https://gakumado.mynavi.jp/m/articles/gmd/_tu_sharoushi/img/shr2020/article1_mainillust.png"></figure>
+                        <h2 class="ttl1"><img src="https://gakumado.mynavi.jp/m/articles/gmd/_tu_sharoushi/img/shr2020/article1_mainttl.png" alt="あなたはどんな社会人生活を送りたい？ 深層心理から本当の望みが見えてくる！ “理想の働き方”診断テスト"></h2>
+                    </div>
+                    <div class="nav_read bgcolor1">
+                        <p>就活を始めるみなさん、就職先＝“企業名”から選ぼうとしていませんか？　<br class="is-pc">内定をもらっても、最終的にどの企業に入るか悩んでいる……という場合もあるでしょう。<br class="is-pc">大事なのは、「こんな社会人生活を送りたい！」というイメージをきちんと持ち、<br class="is-pc">それが実現できそうな企業を見極めること。<br class="is-pc">以下の診断テストであなたの理想の働き方を確認してみましょう！</p>
+                        <div class="btn btn_color1 dropshadow1"><a href="https://gakumado.mynavi.jp/contents/m/articles/gmd/_tu_sharoushi/article1.php" target="_blank"><span>診断スタート！</span></a></div>
+                    </div>
+                </section>
+                
+                <section class="top_nav nav2" id="article2">
+                    <div class="nav_ttl">
+                        <figure class="illust2"><img src="https://gakumado.mynavi.jp/m/articles/gmd/_tu_sharoushi/img/shr2020/article2_mainillust.png"></figure>
+                        <h2 class="ttl2"><img src="https://gakumado.mynavi.jp/m/articles/gmd/_tu_sharoushi/img/shr2020/article2_mainttl.png" alt="2つの視点で比べる企業見極めPOINT"></h2>
+                    </div>
+                    <div class="nav_read bgcolor2">
+                        <p>企業を選ぶとき参考にする、求人や企業情報の正しい見方を、ちゃんと理解していますか？　<br class="is-pc">誤った見方をしていると、条件を確認して入社を決めたはずなのに、<br class="is-pc">実際に働いてみると「こんなはずじゃなかった！」……なんてことにもなりかねません。<br class="is-pc">そうならないために、人事・労務のプロ、社労士さんが企業情報の見極めポイントを解説します。</p>
+                        <div class="btn btn_color2 dropshadow1"><a href="https://gakumado.mynavi.jp/contents/m/articles/gmd/_tu_sharoushi/article2.php" target="_blank"><span>POINTをチェック！</span></a></div>
+                    </div>
+                </section>
+                
+                <section class="top_nav nav3" id="article3">
+                    <div class="nav_ttl">
+                        <figure class="illust3"><img src="https://gakumado.mynavi.jp/m/articles/gmd/_tu_sharoushi/img/shr2020/article3_mainillust.png"></figure>
+                        <h2 class="ttl3"><img src="https://gakumado.mynavi.jp/m/articles/gmd/_tu_sharoushi/img/shr2020/article3_mainttl.png" alt="幸せな人生を送るための未来予想ロードマップ"></h2>
+                    </div>
+                    <div class="nav_read bgcolor3">
+                        <p>就活のゴールはどこだと思いますか？　<br class="is-pc">就職先が決まること？　でもそれはゴールではなく、これから続いていく長い社会人人生のスタートなのです。<br class="is-pc">"仕事"と"私生活"をうまく両立させ、自分の人生を幸せなものにしていくことが本当のゴールでは？　<br class="is-pc">「でも本当に両立できるの？」「何十年も先のことなんて想像できない！」<br class="is-pc">そんな不安を解消するべく、人生の先輩で人事・労務のプロである、社労士さんにお話をお伺いしました。</p>
+                        <div class="btn btn_color3 dropshadow1"><a href="https://gakumado.mynavi.jp/contents/m/articles/gmd/_tu_sharoushi/article3.php" target="_blank"><span>インタビュー記事を読む</span></a></div>
+                    </div>
+                </section>
+                
+                <section class="top_link">
+                    <figure class="illust"><img src="https://gakumado.mynavi.jp/m/articles/gmd/_tu_sharoushi/img/shr2020/link_illust.png"></figure>
+                    <ul class="linkbnr">
+                        <li><a href="https://www.sr-message.jp/" target="_blank"><img src="https://gakumado.mynavi.jp/m/articles/gmd/_tu_sharoushi/img/shr2020/linkbnr1.jpg" alt="〜それぞれの大切なもの〜 パパの選択"></a></li>
+                        <li><a href="https://www.shakaihokenroumushi.jp/Portals/0/resources/onayami/part-time/" target="_blank"><img src="https://gakumado.mynavi.jp/m/articles/gmd/_tu_sharoushi/img/shr2020/linkbnr2.jpg" alt="アルバイトのお悩み相談　ぼくたちの悩みきいてください"></a></li>
+                        <li><a href="https://www.shakaihokenroumushi.jp/Portals/0/resources/onayami/comic/" target="_blank"><img src="https://gakumado.mynavi.jp/m/articles/gmd/_tu_sharoushi/img/shr2020/linkbnr3.jpg" alt="「人を大切にする企業」づくり支援サイト"></a></li>
+                    </ul>
+                </section>
+                
+                <p class="ad">マイナビ学生の窓口　広告企画／提供：全国社会保険労務士会連合会</p>
+            </div>
+        </div>
+        <!-- ↑★★★★★ここまでコンテンツ ★★★★★ -->
+
+
+
+
+
+    </div>
+    <!-- END //#wrapper -->
+
+    <!-- ↓rwd_PCフッターの呼び出し -->
+    <div class="r-pc">
+<footer class="l-footer">
+  <div class="c-footer-primary">
+    <ul class="c-footer-primary-nav">
+      <li class="c-footer-primary-nav__item"><a href="/gmd/pages/about/">このサイトについて</a></li>
+      <li class="c-footer-primary-nav__item"><a href="/gmd/pages/rules/">利用規約</a></li>
+      <li class="c-footer-primary-nav__item"><a href="/gmd/pages/privacy/">個人情報について</a></li>
+      <li class="c-footer-primary-nav__item"><a href="https://gakumado.mynavi.jp/contents/m/articles/gmd/contact/">お問い合わせ</a></li>
+      <li class="c-footer-primary-nav__item"><a href="https://gakumado.mynavi.jp/m/articles/gmd/common/red/present.html">読者プレゼント提供</a></li>
+      <li class="c-footer-primary-nav__item"><a href="https://gakumado.mynavi.jp/gakumadolab/contact">広告掲載のお問い合わせ</a></li>
+    </ul>
+    <p class="c-footer-primary__pagetop"><a class="js-pagetop" href="#header">Page Top</a></p>
+  </div>
+  <!-- /.c-footer-primary -->
+
+  <div class="c-footer-secondary">
+    <!-- ===== Footer Start ===== -->
+<div id="GlobalFooter">
+    <div id="FooterLogo">
+        <a href="https://www.mynavi.jp/" target="_blank" rel="nofollow">
+            <img alt="株式会社マイナビ" src="https://gakumado.mynavi.jp/assets/front/gmd/pc/common/footer/footer-mark-3bcbbe7215ead1a1b971451b7a0e0d7b063b7f7700a674a25e35bc3274724eb2.png">
+        </a>
+    </div>
+    <div id="FooterService">
+        <div id="FooterServiceHead" class="clearfix">
+            <div class="FooterTitle">マイナビグループの関連サイト</div>
+        </div>
+        <div id="FooterServiceCont">
+            <dl class="clearfix">
+                <dt class="pl">求人情報</dt>
+                <div class="flex">
+                    <dd><a href="https://job.mynavi.jp/" target="_blank" rel="nofollow">学生の就活</a></dd>
+                    <dd><a href="https://global.mynavi.jp/" target="_blank" rel="nofollow">留学経験者の就活</a></dd>
+                    <dd><a href="https://nurse.mynavi.jp/" target="_blank" rel="nofollow">看護学生向け</a></dd>
+                    <dd><a href="https://resident.mynavi.jp/" target="_blank" rel="nofollow">医学生・研修医向け</a></dd>
+                    <dd><a href="https://dokuritsu.mynavi.jp/" target="_blank" rel="nofollow">独立・開業情報</a></dd>
+                    <dd><a href="https://tenshoku.mynavi.jp/" target="_blank" rel="nofollow">転職・求人情報</a></dd>
+                    <dd><a href="https://tenshoku.mynavi.jp/global/" target="_blank" rel="nofollow">海外求人</a></dd>
+                    <dd><a href="https://mynavi.agentsearch.jp/" target="_blank" rel="nofollow">転職エージェント</a></dd>
+                    <dd><a href="https://baito.mynavi.jp/" target="_blank" rel="nofollow">アルバイト</a></dd>
+                    <dd><a href="https://part.mynavi.jp/" target="_blank" rel="nofollow">パート</a></dd>
+                    <dd><a href="https://mynavi-ms.jp/" target="_blank" rel="nofollow">ミドル・シニアの求人</a></dd>
+                    <dd class="last"><a href="https://mynavi-kaigo.jp/" target="_blank" rel="nofollow">福祉・介護の転職／パート</a></dd>
+                </div>
+            </dl>
+            <dl class="clearfix">
+                <dt>進路情報</dt>
+                <div class="flex">
+                    <dd class="last"><a href="https://shingaku.mynavi.jp/" target="_blank" rel="nofollow">高校生の進路情報</a></dd>
+                </div>
+            </dl>
+            <dl class="clearfix">
+                <dt class="pl">情報サービス</dt>
+                <div class="flex">
+                    <dd><a href="https://news.mynavi.jp/" target="_blank" rel="nofollow">総合・専門ニュース</a></dd>
+                    <dd><a href="https://teens.mynavi.jp/" target="_blank" rel="nofollow">10代のチャレンジサイト</a></dd>
+                    <dd><a href="https://teenslab.mynavi.jp/" target="_blank" rel="nofollow">ティーンマーケティング支援</a></dd>
+                    <dd><a href="https://gakumado.mynavi.jp/" target="_blank" rel="nofollow">大学生活情報</a></dd>
+                    <dd><a href="https://katekyo.mynavi.jp/" target="_blank" rel="nofollow">学生講師の家庭教師</a></dd>
+                    <dd><a href="https://woman.mynavi.jp/" target="_blank" rel="nofollow">働く女性の生活情報</a></dd>
+                    <dd><a href="https://book.mynavi.jp/" target="_blank" rel="nofollow">雑誌・書籍・ソフト</a></dd>
+                    <dd><a href="https://cue.japan-i.net/" target="_blank" rel="nofollow">海外向け（Cue日本）</a></dd>
+                    <dd><a href="https://wedding.mynavi.jp/" target="_blank" rel="nofollow">ウエディング情報</a></dd>
+                    <dd><a href="https://www.sekaken.jp/" target="_blank" rel="nofollow">世界遺産検定</a></dd>
+                    <dd><a href="https://travel.mynavi.jp/" target="_blank" rel="nofollow">宿泊予約・旅行予約</a></dd>
+                    <dd><a href="https://agri.mynavi.jp/" target="_blank" rel="nofollow">総合農業情報サイト</a></dd>
+                    <dd class="last"><a href="https://osusume.mynavi.jp/" target="_blank" rel="nofollow">お買い物サポートメディア</a></dd>
+                </div>
+            </dl>
+            <dl class="clearfix">
+                <dt class="pl">人材派遣・紹介</dt>
+                <div class="flex">
+                    <dd><a href="https://staff.mynavi.jp/" target="_blank" rel="nofollow">人材派遣</a></dd>
+                    <dd><a href="https://mynavi-creator.jp/" target="_blank" rel="nofollow">Web・ゲーム業界の転職</a></dd>
+                    <dd><a href="https://mynavi-job20s.jp/" target="_blank" rel="nofollow">20代・第二新卒</a></dd>
+                    <dd><a href="https://shinsotsu.mynavi-agent.jp/" target="_blank" rel="nofollow">新卒紹介</a></dd>
+                    <dd><a href="https://mynavi-agent.jp/" target="_blank" rel="nofollow">転職コンサルティング</a></dd>
+                    <dd><a href="https://executive.mynavi-agent.jp/" target="_blank" rel="nofollow">エグゼクティブ転職</a></dd>
+                    <dd><a href="https://cpa.mynavi.jp/" target="_blank" rel="nofollow">会計士の転職</a></dd>
+                    <dd><a href="https://zeirishi.mynavi-agent.jp/" target="_blank" rel="nofollow">税理士の求人・転職</a></dd>
+                    <dd><a href="https://komon.mynavi-agent.jp/" target="_blank" rel="nofollow">顧問紹介</a></dd>
+                    <dd><a href="https://pharma.mynavi.jp/" target="_blank" rel="nofollow">薬剤師の転職</a></dd>
+                    <dd><a href="https://kango.mynavi.jp/" target="_blank" rel="nofollow">看護師の求人</a></dd>
+                    <dd><a href="https://co-medical.mynavi.jp/" target="_blank" rel="nofollow">コメディカル求人</a></dd>
+                    <dd><a href="https://doctor.mynavi.jp/" target="_blank" rel="nofollow">医師の求人</a></dd>
+                    <dd><a href="https://hoiku.mynavi.jp/" target="_blank" rel="nofollow">保育士の求人</a></dd>
+                    <dd><a href="https://mynavi-cr.jp/" target="_blank" rel="nofollow">無期雇用派遣</a></dd>
+                    <dd><a href="https://ms-mynavi.jp/jinzai/" target="_blank" rel="nofollow">ミドル・シニア</a></dd>
+                    <dd class="last"><a href="https://kaigoshoku.mynavi.jp/" target="_blank" rel="nofollow">介護の求人</a></dd>
+                </div>
+            </dl>
+            <dl class="clearfix">
+                <dt>法人向け</dt>
+                <div class="flex">
+                    <dd><a href="https://saponet.mynavi.jp/" target="_blank" rel="nofollow">新卒採用支援</a></dd>
+                    <dd><a href="https://hrd.mynavi.jp/" target="_blank" rel="nofollow">研修サービス</a></dd>
+                    <dd class="last"><a href="https://msc.mynavi.jp/" target="_blank" rel="nofollow">発送代行</a></dd>
+                </div>
+            </dl>
+        </div>
+    </div>
+
+    <div id="FooterCorp">
+        <div id="FooterCorpInfo">
+            <div id="FooterCorpId">
+                <div id="FooterCorpName">
+                    <a href="https://www.mynavi.jp/" target="_blank" rel="nofollow">
+                        <img alt="株式会社マイナビ" src="https://gakumado.mynavi.jp/assets/front/gmd/pc/common/footer/footer-logo-df1c71245671c77b8bd2c06c6de1a06fc44b58c3499d76dc6c32e5b1e2f506e4.png">
+                    </a>
+                </div>
+                <p id="copyright">Copyright © Mynavi Corporation</p>
+            </div>
+            <div id="FooterCorpLink">
+                <ul>
+                    <li><a href="https://www.mynavi.jp/company/" target="_blank" rel="nofollow">会社概要</a></li>
+                    <li><a href="https://www.mynavi.jp/company/office.html" target="_blank" rel="nofollow">事業所案内</a></li>
+                    <li><a href="https://www.mynavi.jp/company/social.html" target="_blank" rel="nofollow">社会的な取り組み</a></li>
+                    <li><a href="https://www.mynavi.jp/recruit/" target="_blank" rel="nofollow">採用情報</a></li>
+                    <li><a href="https://www.mynavi.jp/group/" target="_blank" rel="nofollow">グループ会社</a></li>
+                    <li class="last"><a href="https://www.mynavi.jp/privacy/" target="_blank" rel="nofollow">個人情報保護方針</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="privacy">
+        <a href="https://privacymark.jp/" target="_blank" rel="nofollow">
+            <img src="https://conts1.mynv.jp/privacy.png" onerror="this.onerror = null;this.src='https://conts2.mynv.jp/privacy.png';" width="75" height="75" alt="プライバシーマーク">
+        </a>
+    </div>
+</div>
+<!-- // ===== Footer End ===== -->
+  </div>
+  <!-- /.c-footer-secondary -->
+</footer>
+
+<script>
+  new SmoothScroll();
+</script>
+
+<script>
+  $(function() {
+    new LazyLoad({ elements_selector: '.js-lazyload' });
+  });
+</script>
+
+
+    </div>
+    <!-- ↑rwd_PCフッターの呼び出し -->
+
+    <!-- ↓rwd_SPのSNSボタン(不要ならコメント) -->
+    <div class="r-sp">
+
+        <!-- ↓SNSボタン(不要ならコメント)-->
+        <div style="padding-top:20px;width:170px; margin:auto;">
+            <ul>
+                <li class="facebook" style="float:left;width:auto;padding-right:10px;">
+                    <div id="fb-root"></div>
+                    <script type="text/javascript">
+                        (function(d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0];
+                            if (d.getElementById(id)) return;
+                            js = d.createElement(s);
+                            js.id = id;
+                            js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));
+                    </script>
+                    <div class="fb-like" data-href="https://gakumado.mynavi.jp/contents/m/articles/gmd/_tu_sharoushi/index.php" data-action="like" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>
+                </li>
+                <li class="twitter" style="float:left;width:auto;"> <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-lang="ja">Tweet</a>
+                    <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
+                </li>
+            </ul>
+            <br clear="all">
+        </div>
+        <!-- ↑SNSボタン(不要ならコメント)-->
+    </div>
+    <!-- ↑rwd_SPのSNSボタン(不要ならコメント) -->
+
+    <!-- ↓rwd_SPフッターの呼び出し -->
+    <div class="r-sp">
+<footer>
+  <a class="c-footer__company" href="https://www.mynavi.jp" rel="Footer_inc_corporate_info">株式会社マイナビ</a>
+  <p class="c-footer__copy">Copyright c Mynavi Corporation</p>
+  <ul class="c-footer__nav">
+    <li class="c-footer__item"><a href="https://www.mynavi.jp/company/" rel="Footer_inc_corporate_info">会社概要</a></li>
+<!--
+    --><li class="c-footer__item"><a href="https://www.mynavi.jp/service/" rel="Footer_inc_corporate_info">サービス一覧</a></li>
+<!--
+    --><li class="c-footer__item"><a href="https://www.mynavi.jp/company/office.html" rel="Footer_inc_corporate_info">事業所案内</a></li>
+  </ul>
+  <ul class="c-footer__nav">
+    <li class="c-footer__item"><a href="https://www.mynavi.jp/company/social.html" rel="Footer_inc_corporate_info">社会的な取り組み</a></li>
+<!--
+    --><li class="c-footer__item"><a href="https://www.mynavi.jp/recruit/" rel="Footer_inc_corporate_info">採用情報</a></li>
+  </ul>
+  <ul class="c-footer__nav">
+    <li class="c-footer__item"><a href="https://www.mynavi.jp/group/" rel="Footer_inc_corporate_info">グループ会社</a></li>
+<!--
+    --><li class="c-footer__item"><a href="https://www.mynavi.jp/privacy/" rel="Footer_inc_corporate_info">個人情報保護方針</a></li>
+  </ul>
+  <div class="c-footer__privacy"></div>
+</footer>
+
+    </div>
+    <!-- ↑rwd_SPフッターの呼び出し -->
+</body>
+</html>
+

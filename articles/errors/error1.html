@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja" style="overflow-x:hidden;">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,user-scalable=yes,initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="システムエンジニア,SE,IT,Javascript,Ruby,Ruby on Rails,PHP,HTML,CSS">
+    <title> | Jin`s Blog</title>
+    <!-- ↓ファビコン --> 
+    <link rel="shortcut icon" href="../assets/img/favicon.ico">
+    <!-- ↓携帯アイコン -->
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+    <!-- ↓リセットcss,フォント等 -->
+    <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900" rel="stylesheet">
+    <!-- ↓css -->
+    <link rel="stylesheet" href="../../assets/css/article.css">
+    <!-- ここから script -->
+      <!-- ↓ソースコード表示script -->
+      <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+  </head>
+
+  <body class="page">
+    <!--ヘッダー-->
+    <header class="page-head">
+       <h3>Error Note</h3>
+       <!-- <div class="login">login</div> -->
+    </header>
+    
+    <main class="page-main">
+      <div class="introduce">
+       <h2 class="lead">ローカル変数とブロック</h2>
+<p>
+配列の要素数を数えるプログラムを作ってみた。
+</p>
+<p>
+do〜end内に変数i=0として初期化し、
+</p>
+<p>
+配列arraysの要素arrayに対して要素ごとにiの値が+1になるようにi = i + 1を定義した。
+</p>
+
+<div class="code">
+<pre><code class="prettyprint">
+  arrays = ["鉛筆","シャープペンシル","筆","マーカー","ボールペン"]
+  
+  arrays.each do |array|     
+    i = 0
+    i = i + 1
+  end 
+
+  puts i
+</code></pre>
+</div>
+<p>
+ターミナルでプログラムを実行してみたが、エラーが出てしまった。
+</p>
+<pre class="terminal">
+Traceback (most recent call last):
+error.rb:8:in `&lt;main&gt;': undefined local variable or method `i' for main:Object (NameError)
+</pre>
+<p>
+なぜこのような結果になってしまったのだろう。
+</p>
+<p>
+変数にはスコープがあり、ブロック内に変数iを設定したから、
+エラーにはならないはずだと思っていた。</p>
+<p>エラーの内容をよく見ると、
+ローカル変数もしくは
+メインオブジェクトに対するメソッドiが
+</p>
+<p>が定義されてないとなっている。</p>
+<br>
+<br>
+<h2 class="lead">ブロック内の変数はブロックの外では呼び出せない</h2>
+<p>なぜエラーになったのか。考えられる原因は
+</p>
+<div class="cause">
+<p>
+1. iはブロック内で定義された変数。
+</p>
+<p>
+2. iはローカルで定義されてないのでエラー発生。
+</p>
+</div>
+<p>
+変数iはブロック内でしか働かない。
+</p>
+<p>
+ブロックの外では無いものにされる。なのでエラーが出るのは当たり前だった。
+</p>
+<p>
+要するに変数iはスコープ外だったということ。
+</p>
+<br>
+<br>
+<h2 class="lead">ローカル変数とブロックの関係</h2>
+<p>
+また、最初の課題に戻って
+配列の要素数を数えるプログラム。
+</p>
+<div class="code">
+<pre><code class="prettyprint">
+  arrays = ["鉛筆","シャープペンシル","筆","マーカー","ボールペン"]
+  i = 0
+
+  arrays.each do |array|
+  i = i + 1
+  end
+  
+  puts i
+</code></pre>
+</div>
+<p>
+これを実行するとちゃんとした答えが出た。
+</p>
+<pre class="terminal">
+5
+</pre>
+<p>
+しかし、なぜこれはエラーにならないのだろう。
+</p>
+<p>
+今度iはローカル変数であり（i = 0として初期化）、
+</p>
+<p>
+do〜endの間のブロック内にはスコープ外で、
+</p>
+<p>
+認識されないだろうと思った。
+</p>
+<p>
+なのでputs iで結果を出力すると0なはず。
+</p>
+<br>
+<br>
+<h2 class="lead">ローカル変数はブロック内に渡せる</h2>
+<p>
+結論からいうとローカル変数はブロック内でも有効であるということだ。
+</p>
+<p>
+つまり、ローカルで初期化されブロックに渡される。
+</p>
+<p>
+do〜endまでの処理を終えたローカル変数iは初期値0ではなく、
+</p>
+<p>
+ブロックの結果として現れる。
+</p>
+<p>
+ローカル -> ブロック -> ローカルへと順番通りに処理される。
+</p>
+<p>
+もし、変数i=0をブロック内で初期化したら、
+</p>
+<p>
+ブロック内に閉じ込められ、ローカルで呼び出しても呼び出せない。
+</p>
+  </main>
+    
+  <footer class="foot">
+
+  </footer>
+  </body>
+ 
+</html>

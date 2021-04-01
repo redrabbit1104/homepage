@@ -1,0 +1,38 @@
+<script type="text/javascript">
+  //合計金額を計算する関数
+function calculate(){
+var pen = document.getElementById("pen").selectedIndex * 200;    
+//getElementByIdでpen要素を取得。選択したオプションの番号に200を掛けた値を変数penに代入。
+var note = document.getElementById("note").selectedIndex * 100;
+//getElementByIdでpen要素を取得。選択したオプションの番号に200を掛けた値を変数penに代入。
+document.getElementById("output").value = pen + note;
+//getElementByIdでoutput要素を取得。変数penとnoteの合計をoutput要素の値に代入。
+}
+  </script>
+<body>
+<form>
+ <table>
+ <tr><th>商品</th><th>単価</th><th>注文数</th></tr>
+ <tr><td>ペン</td><td>200円</td><td>
+ <!-- onchangeでselectタグ内の要素が変化した場合calculate()関数が実行される-->
+ <select id="pen" onchange="return calculate()">    
+
+   <option>0</option>
+   <option>1</option>
+   <option>2</option>
+   <option>3</option>
+ </select>
+ 個</td></tr>
+ <tr><td>ノート</td><td>100円</td><td>
+ <select id="note" onchange="return calculate()">
+   <option>0</option>
+   <option>1</option>
+   <option>2</option>
+   <option>3</option>
+ </select>
+ 個</td></tr>
+ <tr><td colspan="2">合計金額</td><td>
+  <input type="text" id="output" value="0" size="6" readonly>
+ 円</td></tr>
+</table>
+</body>

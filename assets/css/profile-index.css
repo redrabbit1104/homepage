@@ -1,0 +1,208 @@
+header {
+    margin: 5vh 5vw;
+    font-size: 50px;
+    border-bottom: 10px solid;
+    width: 80vw;
+}
+
+.profile_wrapper {
+    margin: 5vh 5vw;
+}
+
+.facial {
+    display: grid;
+    grid-template-columns: 1.5fr 3fr;
+    grid-template-rows: 1fr 3fr;
+    grid-column-gap: 20px;
+    column-gap: 20px;
+    grid-row-gap: 15px;
+    row-gap: 15px;
+}
+
+.facial_photo {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    background-image: url("../img/pic5.png");
+    background-size: cover;
+}
+
+.facial_name {
+    grid-column: 2/3;
+    grid-row: 1/1;
+    font-size: 25px;
+}
+
+.facial_name h1 {
+    margin-bottom: 7px;
+}
+
+.facial_info_wrapper {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    font-size: 15px;
+}
+
+.facial_text {
+    border-bottom: solid 3px;
+    margin-bottom: 5px;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.hobby {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    grid-template-rows: 0.3fr 1.7fr;
+    grid-column-gap: 5px;
+    column-gap: 5px;
+    grid-row-gap: 5px;
+    row-gap: 5px;
+    height: 500px;
+}
+
+.hobby_name {
+    padding-left: 50px;
+}
+
+.hobby_name h1 {
+    font-size: 25px;
+    padding-bottom: 15px;
+    padding-top: 25px;
+}
+
+.hobby_info_wrapper {
+    padding-left: 50px;
+}
+
+.hobby_text {
+    border-bottom: solid 3px;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+p {
+    line-height: normal;
+    font-size: 15px;
+}
+
+.hobby_photo {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    background-image: url("../img/pic10.jpeg");
+    background-size: cover;
+    height: 230px;
+    width: 400px;
+}
+
+.hobby_photo_second {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background-image: url("../img/pic9.JPG");
+    background-size: cover;
+    margin-top: 140px;
+    margin-left: 50px;
+    height: 270px;
+    width: 380px;
+}
+
+.profile_history_wrapper {
+    margin-bottom: 230px;
+}
+
+.application_wrapper {
+    margin: 20px 50px 50px 40px;
+}
+
+.application {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 3fr;
+    grid-column-gap: 3px;
+    column-gap: 3px;
+    grid-row-gap: 10px;
+    row-gap: 10px;
+    height: 280px;
+}
+
+.application_name {
+    grid-column: 2/3;
+    grid-row: 1/1;
+    font-size: 25px;
+    justify-self: left;
+}
+
+.application_photo {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    background-image: url("../img/pic6.JPG");
+    background-size: cover;
+    height: 300px;
+    width: 290px;
+}
+
+.application_text {
+    border-bottom: solid 3px;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.history {
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+    grid-template-rows: 1fr 3fr;
+    grid-column-gap: 30px;
+    column-gap: 30px;
+    grid-row-gap: 10px;
+    row-gap: 10px;
+    height: 230px;
+}
+
+.history_wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+    column-gap: 10px;
+    grid-row-gap: 10px;
+    row-gap: 10px;
+    height: 100%;
+}
+
+.history_name {
+    grid-column: 5/6;
+    grid-row: 1/1;
+    font-size: 25px;
+    justify-self: center;
+    letter-spacing: -4px;
+}
+
+.history_info_wrapper {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    font-size: 15px;
+    justify-self: end;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+.history_photo {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    background-image: url("../img/pic4.jpg");
+    background-size: cover;
+    height: 420px;
+    width: 340px;
+}
+
+.history_name h1 {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+.history_text {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}

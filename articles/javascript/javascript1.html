@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja" style="overflow-x:hidden;">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,user-scalable=yes,initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="システムエンジニア,SE,IT,Javascript,Ruby,Ruby on Rails,PHP,HTML,CSS">
+    <title> | Jin`s Blog</title>
+    <!-- ↓ファビコン --> 
+    <link rel="shortcut icon" href="../assets/img/favicon.ico">
+    <!-- ↓携帯アイコン -->
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+    <!-- ↓リセットcss,フォント等 -->
+    <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900" rel="stylesheet">
+    <!-- ↓css -->
+    <link rel="stylesheet" href="../../assets/css/article.css">
+    <!-- ここから script -->
+    <!-- ↓ソースコード表示script -->
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+      
+  </head>
+
+  <body class="page">
+     <!--ヘッダー-->
+     <header class="page-head">
+      <h3>Javascript</h3>
+      <!-- <div class="login">login</div> -->
+     </header>
+     <main class="page-main">
+     <div class="introduce">
+     <h2 class="lead">Javascript Source</h2>
+     <div class="code">
+      <pre><code class="prettyprint">
+        &lt;script type="text/javascript"&gt;
+
+         //合計金額を計算する関数
+         function calculate(){  
+
+         //getElementByIdでpen要素を取得。選択したオプションに200を掛け変数penに代入。
+         var pen = document.getElementById("pen").selectedIndex * 200;   
+
+         //getElementByIdでpen要素を取得。選択したオプションに100を掛け変数penに代入。
+         var note = document.getElementById("note").selectedIndex * 100;     
+         
+         //getElementByIdでoutput要素を取得。変数penとnoteの合計をoutput要素の値に代入。
+         document.getElementById("output").value = pen + note;}   
+                
+         &lt;/script&gt;
+      </code></pre>
+      </div>
+
+      <h2 class="lead">Html Source</h2>
+      <div class="code">
+       <pre><code class="prettyprint">
+        &lt;body&gt;
+        &nbsp;&nbsp;&lt;form&gt;
+        &nbsp;&nbsp;&nbsp;&lt;table&gt;
+        &nbsp;&nbsp;&nbsp;&lt;tr&gt;&lt;th&gt;商品&lt;/th&gt;&lt;th&gt;単価&lt;/th&gt;&lt;th&gt;注文数&lt;/th&gt;&lt;/tr&gt;
+        &nbsp;&nbsp;&nbsp;&lt;tr&gt;&lt;td&gt;ペン&lt;/td&gt;&lt;td&gt;200円&lt;/td&gt;&lt;td&gt;
+        &nbsp;&nbsp;&nbsp;&lt;!-- onchangeでselectタグ内の要素が変化した場合calculate()関数が実行される--&gt;
+        &nbsp;&nbsp;&nbsp;&lt;select id="pen" onchange="return calculate()"&gt;    
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;0&lt;/option&gt;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;1&lt;/option&gt;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;2&lt;/option&gt;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;3&lt;/option&gt;
+        &nbsp;&nbsp;&nbsp;&lt;/select&gt;
+        &nbsp;&nbsp;&nbsp;個&lt;/td&gt;&lt;/tr&gt;
+        &nbsp;&nbsp;&nbsp;&lt;tr&gt;&lt;td&gt;ノート&lt;/td&gt;&lt;td&gt;100円&lt;/td&gt;&lt;td&gt;
+        &nbsp;&nbsp;&nbsp;&lt;select id="note" onchange="return calculate()"&gt;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;0&lt;/option&gt;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;1&lt;/option&gt;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;2&lt;/option&gt;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;3&lt;/option&gt;
+        &nbsp;&nbsp;&nbsp;&lt;/select&gt;
+        &nbsp;&nbsp;&nbsp;個&lt;/td&gt;&lt;/tr&gt;
+        &nbsp;&nbsp;&nbsp;&lt;tr&gt;&lt;td colspan="2"&gt;合計金額&lt;/td&gt;&lt;td&gt;
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="output" value="0" size="6" readonly&gt;
+        &nbsp;&nbsp;&nbsp;円&lt;/td&gt;&lt;/tr&gt;
+        &nbsp;&lt;/table&gt;
+        &lt;/body&gt;
+      </code></pre>
+      </div>
+
+      <h2 class="lead">実行した画面</h2>
+      <iframe src="result1.html"></iframe>
+      </div>
+     </main>
+   <footer class="foot">
+
+  </footer>
+  </body>
+ 
+</html>

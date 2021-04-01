@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,user-scalable=yes,initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="システムエンジニア,SE,IT,Javascript,Ruby,Ruby on Rails,PHP,HTML,CSS">
+    <title> | Jin`s Blog</title>
+    <!-- ↓ファビコン --> 
+    <link rel="shortcut icon" href="../assets/img/favicon.ico">
+    <!-- ↓携帯アイコン -->
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+    <!-- ↓リセットcss,フォント等 -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900" rel="stylesheet">
+    <!-- ↓font-awesomeアニメ効果URL -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.3.0/font-awesome-animation.min.css">
+    <!-- ↓css -->
+    <link rel="stylesheet" href="../assets/css/kiji-menu.css">
+    <!-- ここから script -->
+  </head>
+
+  <body class="page"> 
+    <script language="javascript" type="text/javascript">
+     
+      //       function test(e){
+      //       alert("text=" + e.innerText + "  link=" + e.href);
+      // }
+      
+      // function test(e){
+      //   var l = e.innerText;
+      //    alert(parent.b.document.getElementById('kai').innerHtml);
+      //   }
+
+      //新規投稿にnewをつける関数
+      function newMark(y,m,d){
+        oldDay = new Date(y+"/"+m+"/"+d);
+	      newDay = new Date();
+	      n = (newDay - oldDay)/(1000*60*60*24);
+	      if (n <= 7) document.write("<font color='red' size='2px'><i>&nbsp;New</i></font>");}
+    </script>
+
+    <!--ヘッダー-->
+    <header class="page-head">
+      <a href="../index.html" target="_parent">
+        <i class="fas fa-leaf fa-2x faa-float animated my-icon" title="indexページへ戻る" alt="Jin's Cafe"></i>
+      </a>
+        <p title="indexページへ戻る">Jin's Cafe</p>
+    </header>
+    
+    <main class="page-main">
+      <div id="output"></div>
+    </main>
+    
+    <nav class="page-nav">
+      <h1><a href="kiji-index.html" alt="ブログトップページへ戻る" target="b">Notice</a></h1>
+      <h1>Note to Self</h1>
+      <ul>
+        <!-- <li><a href="">Html/Css</a></li> -->
+        <li><a href="javascript.html" alt="Javascript" target="b">Javascript<script>newMark(2020,11,2)</script></a></li>
+        <!-- <li><a href="">Ruby</a></li>
+        
+        <li><a href="">その他</a></li> -->
+        <li><a href="rubyonrails.html" alt="RubyOnRails" target="b">Ruby On Rails<script>newMark(2020,11,21)</script></a></li>
+        <li><a href="error-note.html" alt="Error Note" target="b">Error Note<script>newMark(2020,10,29)</script></a></li>
+      </ul>
+    </nav>
+    <button type="button" class="page-btn" onclick="myFunc()">
+      <span class="fas fa-cog fa-spin" title="メニューを開く"></span>
+    </button>
+
+    <button type="button" class="page-btn-close" onclick="myFunc()">
+      <span class="fas fa-times" title="メニューを閉じる"></span>
+    </button>
+    
+    <!--フッター-->
+    <footer class="copyright">
+      Copyright 2020 <br>Jin`s Cafe ALL RIGHT RESERVED.
+    </footer>
+    <!--フッター-->
+    <script>
+      function myFunc() {
+        document.querySelector('.page').classList.toggle('open');
+      }
+    </script>
+  </body>
+</html>
