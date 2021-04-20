@@ -74,6 +74,10 @@ p {
   font-size: 15px;
 }
 
+li {
+  margin-bottom: 10px;
+}
+
 .skills_img_wrapper {
   display: block;
   float: left;
@@ -89,6 +93,10 @@ p {
 
 .archivements_history_wrapper {
   margin-bottom: 230px;
+}
+
+.application_info_wrapper {
+  margin-left: 50px;
 }
 
 .application_wrapper {
@@ -111,16 +119,18 @@ p {
   grid-row: 1/1;
   font-size: 25px;
   justify-self: left;
+  margin-bottom: 20px;
 }
 
 .application_photo {
   grid-column: 1/2;
   grid-row: 1/3;
-  // background-image: url("../img/pic6.JPG");
+  background-image: url("../img/applications.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 300px;
-  width: 290px;
+  width: 400px;
+  border-radius: 25px;
 }
 
 .application_text {
@@ -129,60 +139,6 @@ p {
   margin-bottom: 5px;
 }
 
-.history {
-  display: grid;
-  grid-template-columns: 0.7fr 1.3fr;
-  grid-template-rows: 1fr 3fr;
-  grid-column-gap: 30px;
-  column-gap: 30px;
-  grid-row-gap: 10px;
-  row-gap: 10px;
-  height: 230px;
-}
-
-.history_wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  grid-column-gap: 10px;
-  column-gap: 10px;
-  grid-row-gap: 10px;
-  row-gap: 10px;
-  height: 100%;
-}
-
-.history_name {
-  grid-column: 5/6;
-  grid-row: 1/1;
-  font-size: 25px;
-  justify-self: center;
-  letter-spacing: -4px;
-}
-
-.history_info_wrapper {
-  grid-column: 3/4;
-  grid-row: 1/2;
-  font-size: 15px;
-  justify-self: end;
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-}
-
-.history_photo {
-  grid-column: 2/3;
-  grid-row: 1/3;
-  background-image: url("../img/pic4.jpg");
-  background-size: cover;
-  height: 420px;
-  width: 340px;
-}
-
-.history_name h1 {
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-}
-
-.history_text {
-  writing-mode: vertical-rl;
-  text-orientation: upright;
+.original_apps {
+  margin-top: 30px;
 }
