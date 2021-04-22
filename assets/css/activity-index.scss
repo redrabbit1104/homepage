@@ -20,12 +20,21 @@
   float: left;
 }
 
-.skills_name {
+.qualifications_wrapper {
+  margin: 0 5vw 5vh;
+  width: 500px;
+  display: block;
+  float: left;
+}
+
+.skills_name,
+.qualifications_name {
   font-size: 25px;
   margin-bottom: 20px;
 }
 
-.skills_name h1 {
+.skills_name h1,
+.qualifications_name h1 {
   margin-bottom: 7px;
 }
 
@@ -37,7 +46,16 @@
   }
 }
 
-.skills_text {
+.qualifications_info_wrapper {
+  display: flex;
+  font-size: 15px;
+  .first_qualifications_info {
+    margin-right: 20px;
+  }
+}
+
+.skills_text,
+.qualifications_text {
   border-bottom: solid 3px;
   margin-bottom: 5px;
 }
@@ -78,12 +96,29 @@ li {
   margin-bottom: 10px;
 }
 
+.first_qualifications_info ul li {
+  margin-bottom: 20px;
+}
+
 .skills_img_wrapper {
   display: block;
   float: left;
   margin-top: 40px;
   .skills_img {
     background-image: url("../img/skills1.jpeg");
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+  }
+}
+.qualifications_img_wrapper {
+  display: block;
+  float: left;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  .qualifications_img {
+    background-image: url("../img/qualifications.jpg");
     background-size: cover;
     width: 300px;
     height: 300px;
@@ -157,4 +192,12 @@ li {
 
 .original_apps {
   margin-top: 30px;
+}
+
+.activity-qiita {
+  margin: 20px 200px 50px 50px;
+}
+
+.activity-twitter {
+  margin-left: 50px;
 }
